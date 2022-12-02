@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>안녕하세요 이준호입니다.</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 id="sound"></h1>
+    <input type="text" name="" value="" id="name" />
+    <button type="" onclick="getSound()">API 요청</button>
+    <script>
+      function getSound() {
+        const name = document.getElementById("name").value;
+        fetch(`http://localhost:3000/sound/${name}`)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            document.getElementById("sound").innerHTML = data.sound;
+          });
+      }
+    </script>
+  </body>
+</html>
