@@ -1,4 +1,7 @@
 const express = require("express");
+
+const path = require("path");
+
 const app = express();
 const port = 3000;
 var cors = require("cors");
@@ -6,8 +9,14 @@ var cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "pages"));
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("hello world");
+});
+
+app.get("/joonho", (req, res) => {
+  res.render("index");
 });
 
 app.get("/sound/:name", (req, res) => {
