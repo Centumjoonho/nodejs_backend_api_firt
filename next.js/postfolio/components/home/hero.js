@@ -1,4 +1,5 @@
 import Anime from "./anime";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -20,9 +21,11 @@ export default function Hero() {
           날자, 날자, 한 번만 날자꾸나. 한 번만 더 날아 보자꾸나.
         </p>
         <div className="flex justify-center">
-          <button className="inline-flex px-6 py-2 text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">
-            프로젝트s
-          </button>
+          <Link href="/projects" legacyBehavior>
+            <a className="inline-flex px-6 py-2 text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">
+              My Projects
+            </a>
+          </Link>
         </div>
       </div>
       <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">

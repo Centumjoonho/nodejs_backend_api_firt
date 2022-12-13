@@ -4,9 +4,11 @@ import Footer from "./footer";
 export default function Layout({ children }) {
   return (
     <>
-      <Header></Header>
-      <div>{children}</div>
-      <Footer></Footer>
+      <div className="bg-primary">
+        <Header></Header>
+        <div>{children}</div>
+        <Footer></Footer>
+      </div>
     </>
   );
 }
