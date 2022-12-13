@@ -13,9 +13,9 @@ function FileUpload() {
     };
     formData.append("file", files[0]);
 
-    axios.post("/api/product/img", formData, config).then((response) => {
-      if (response.status === 200) {
-        console.log(response.data);
+    axios.post("/api/product/image", formData, config).then((response) => {
+      if (response.data.success) {
+        console.log("first", response.data);
       } else {
         alert("Upload failed");
       }
