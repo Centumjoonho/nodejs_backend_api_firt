@@ -2,8 +2,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="text-gray-600 body-font">
-        <div className="bg-gray-100">
+      <footer className="body-font">
+        <div className="">
           <div className="container flex flex-col items-center px-5 py-6 mx-auto sm:flex-row">
             <Link href="/" legacyBehavior>
               <a className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
