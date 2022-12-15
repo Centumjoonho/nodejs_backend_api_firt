@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Layout from "../layout";
+// import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function ProjectItem({ data }) {
   const Title = data.properties.Name.title[0]?.plain_text;
@@ -9,15 +9,15 @@ export default function ProjectItem({ data }) {
   const ImageSrc = data.cover.file?.url || data.cover.external.url;
 
   return (
-    <div className="flex flex-col m-3 bg-slate-600 rounded-xl">
+    <div className="flex flex-col m-3 rounded-xl bg-slate-500">
       <Image
         className="rounded-t-xl"
         src={ImageSrc}
-        alt="cover"
-        width="50"
-        height={"50"}
+        alt="cover image"
+        width="100%"
+        height="60%"
         layout="responsive"
-        objectFit="none"
+        objectFit="fill"
         quality={100}
       />
 
